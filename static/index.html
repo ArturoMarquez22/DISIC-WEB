@@ -66,8 +66,16 @@
     };
 
     const Hero = () => (
-      <section id="inicio" className="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1531004891743-59dacd06b491?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center">
-        <div className="bg-black bg-opacity-70 p-8 rounded text-center">
+      <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
+        <video
+          src="fire.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        ></video>
+        <div className="relative z-10 bg-black bg-opacity-70 p-8 rounded text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Protegemos lo que más importa: tu vida, tu empresa y tu inversión</h1>
           <a href="#servicios" className="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 inline-block">Conoce nuestros servicios</a>
         </div>
@@ -75,14 +83,14 @@
     );
 
     const ServiceCard = ({ icon, title }) => (
-      <div className="bg-red-800 shadow-md rounded p-6 text-center flex flex-col items-center text-white">
-        <i className={`fas fa-${icon} text-red-600 text-3xl mb-4`}></i>
+      <div className="bg-black shadow-md rounded p-6 text-center flex flex-col items-center text-white">
+        <i className={`fas fa-${icon} text-red-500 text-3xl mb-4`}></i>
         <h3 className="font-semibold text-lg">{title}</h3>
       </div>
     );
 
     const Services = () => (
-      <section id="servicios" className="py-16 bg-red-900">
+      <section id="servicios" className="py-16 bg-red-950">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nuestros Servicios</h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -109,7 +117,7 @@
     );
 
     const About = () => (
-      <section id="nosotros" className="py-16 bg-red-900">
+      <section id="nosotros" className="py-16 bg-red-950">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nosotros</h2>
           <p className="mb-4">DISIC es una empresa dedicada a la venta, renta y mantenimiento de extintores. Nuestro compromiso es ofrecer soluciones integrales de seguridad industrial y comercial.</p>
