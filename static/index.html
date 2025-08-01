@@ -13,47 +13,52 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://kit.fontawesome.com/a315f1122c.js" crossorigin="anonymous"></script>
 </head>
-<body class="font-[Montserrat] antialiased bg-white text-gray-900">
+<body class="font-[Montserrat] antialiased bg-black text-white">
   <div id="root"></div>
 
   <script type="text/babel">
     const MenuItem = ({ children }) => (
-      <a href={`#${children.toLowerCase()}`} className="text-gray-700 hover:text-red-600 px-3 py-2">{children}</a>
+      <a
+        href={`#${children.toLowerCase()}`}
+        className="px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300"
+      >
+        {children}
+      </a>
     );
 
     const Header = () => {
       const [open, setOpen] = React.useState(false);
       return (
-        <header className="bg-white shadow-md fixed w-full z-20">
+        <header className="bg-black shadow-md fixed w-full z-20">
           <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-            <div className="text-2xl font-bold text-red-600">DISIC</div>
-            <nav className="hidden md:flex space-x-4">
+            <img src="images/disiclogo.png" alt="DISIC" className="h-8" />
+            <nav className="hidden md:flex items-center space-x-4">
               <MenuItem>Inicio</MenuItem>
               <MenuItem>Nosotros</MenuItem>
-              <div className="relative group">
-                <a href="#servicios" className="text-gray-700 hover:text-red-600 px-3 py-2">Servicios</a>
-                <div className="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg">
-                  <a href="#extintores" className="block px-4 py-2 hover:bg-gray-100">Extintores</a>
-                  <a href="#senalamientos" className="block px-4 py-2 hover:bg-gray-100">Señalización</a>
-                  <a href="#tech" className="block px-4 py-2 hover:bg-gray-100">DISIC Tech & Fire</a>
+              <div className="relative group inline-block px-3 py-2">
+                <a href="#servicios" className="text-gray-300 group-hover:text-red-500 transition-colors duration-300">Servicios</a>
+                <div className="absolute left-0 mt-2 hidden group-hover:block bg-black shadow-lg">
+                  <a href="#extintores" className="block px-4 py-2 hover:bg-gray-700">Extintores</a>
+                  <a href="#senalamientos" className="block px-4 py-2 hover:bg-gray-700">Señalización</a>
+                  <a href="#tech" className="block px-4 py-2 hover:bg-gray-700">DISIC Tech & Fire</a>
                 </div>
               </div>
               <MenuItem>Clientes</MenuItem>
               <MenuItem>Blog</MenuItem>
               <MenuItem>Contacto</MenuItem>
             </nav>
-            <button className="md:hidden text-gray-700" onClick={() => setOpen(!open)}><i className="fas fa-bars"></i></button>
-            <a href="#contacto" className="hidden md:inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Solicita Cotización</a>
+            <button className="md:hidden text-gray-300 hover:text-red-500 transition-colors duration-300" onClick={() => setOpen(!open)}><i className="fas fa-bars"></i></button>
+            <a href="#contacto" className="hidden md:inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Solicita Cotización</a>
           </div>
           {open && (
-            <div className="md:hidden bg-white p-4 space-y-2">
+            <div className="md:hidden bg-black p-4 space-y-2">
               <MenuItem>Inicio</MenuItem>
               <MenuItem>Nosotros</MenuItem>
               <MenuItem>Servicios</MenuItem>
               <MenuItem>Clientes</MenuItem>
               <MenuItem>Blog</MenuItem>
               <MenuItem>Contacto</MenuItem>
-              <a href="#contacto" className="block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Solicita Cotización</a>
+              <a href="#contacto" className="block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Solicita Cotización</a>
             </div>
           )}
         </header>
@@ -62,7 +67,7 @@
 
     const Hero = () => (
       <section id="inicio" className="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1531004891743-59dacd06b491?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center">
-        <div className="bg-white bg-opacity-70 p-8 rounded text-center">
+        <div className="bg-black bg-opacity-70 p-8 rounded text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Protegemos lo que más importa: tu vida, tu empresa y tu inversión</h1>
           <a href="#servicios" className="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 inline-block">Conoce nuestros servicios</a>
         </div>
@@ -70,14 +75,14 @@
     );
 
     const ServiceCard = ({ icon, title }) => (
-      <div className="bg-white shadow-md rounded p-6 text-center flex flex-col items-center">
+      <div className="bg-gray-800 shadow-md rounded p-6 text-center flex flex-col items-center text-white">
         <i className={`fas fa-${icon} text-red-600 text-3xl mb-4`}></i>
         <h3 className="font-semibold text-lg">{title}</h3>
       </div>
     );
 
     const Services = () => (
-      <section id="servicios" className="py-16 bg-gray-50">
+      <section id="servicios" className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nuestros Servicios</h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -104,7 +109,7 @@
     );
 
     const About = () => (
-      <section id="nosotros" className="py-16 bg-gray-50">
+      <section id="nosotros" className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nosotros</h2>
           <p className="mb-4">DISIC es una empresa dedicada a la venta, renta y mantenimiento de extintores. Nuestro compromiso es ofrecer soluciones integrales de seguridad industrial y comercial.</p>
