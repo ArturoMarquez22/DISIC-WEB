@@ -31,16 +31,16 @@
       return (
         <header className="bg-black shadow-md fixed w-full z-20">
           <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-            <img src="images/disiclogo.png" alt="DISIC" className="h-8" />
+            <img src="images/disiclogo.png" alt="DISIC" className="h-16" />
             <nav className="hidden md:flex items-center space-x-4">
               <MenuItem>Inicio</MenuItem>
               <MenuItem>Nosotros</MenuItem>
               <div className="relative group inline-block px-3 py-2">
                 <a href="#servicios" className="text-gray-300 group-hover:text-red-500 transition-colors duration-300">Servicios</a>
                 <div className="absolute left-0 mt-2 hidden group-hover:block bg-black shadow-lg">
-                  <a href="#extintores" className="block px-4 py-2 hover:bg-gray-700">Extintores</a>
-                  <a href="#senalamientos" className="block px-4 py-2 hover:bg-gray-700">Señalización</a>
-                  <a href="#tech" className="block px-4 py-2 hover:bg-gray-700">DISIC Tech & Fire</a>
+                  <a href="#extintores" className="block px-4 py-2 hover:bg-red-700">Extintores</a>
+                  <a href="#senalamientos" className="block px-4 py-2 hover:bg-red-700">Señalización</a>
+                  <a href="#tech" className="block px-4 py-2 hover:bg-red-700">DISIC Tech & Fire</a>
                 </div>
               </div>
               <MenuItem>Clientes</MenuItem>
@@ -75,14 +75,14 @@
     );
 
     const ServiceCard = ({ icon, title }) => (
-      <div className="bg-gray-800 shadow-md rounded p-6 text-center flex flex-col items-center text-white">
+      <div className="bg-red-800 shadow-md rounded p-6 text-center flex flex-col items-center text-white">
         <i className={`fas fa-${icon} text-red-600 text-3xl mb-4`}></i>
         <h3 className="font-semibold text-lg">{title}</h3>
       </div>
     );
 
     const Services = () => (
-      <section id="servicios" className="py-16 bg-gray-900">
+      <section id="servicios" className="py-16 bg-red-900">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nuestros Servicios</h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -109,7 +109,7 @@
     );
 
     const About = () => (
-      <section id="nosotros" className="py-16 bg-gray-900">
+      <section id="nosotros" className="py-16 bg-red-900">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Nosotros</h2>
           <p className="mb-4">DISIC es una empresa dedicada a la venta, renta y mantenimiento de extintores. Nuestro compromiso es ofrecer soluciones integrales de seguridad industrial y comercial.</p>
@@ -137,7 +137,7 @@
     );
 
     const Footer = () => (
-      <footer className="bg-gray-800 text-white py-6">
+      <footer className="bg-red-800 text-white py-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <p>&copy; 2025 DISIC</p>
           <div className="space-x-4 text-xl">
