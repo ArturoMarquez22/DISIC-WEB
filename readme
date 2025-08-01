@@ -1,0 +1,66 @@
+Quiero que generes el código de una página web moderna, minimalista y responsiva para la empresa llamada **DISIC (Despacho Integral de Seguridad Industrial y Comercial)**, dedicada principalmente a la **venta, renta y mantenimiento de extintores**, así como a **servicios de impresión de señalización de seguridad** y una subdivisión tecnológica llamada **DISIC Tech & Fire**, encargada de la instalación y mantenimiento de sistemas de detección y combate contra incendios.
+
+**Características generales:**
+- Diseño minimalista, industrial y tecnológico
+- Paleta de colores: fondo blanco o gris claro, detalles en rojo y negro
+- Tipografía moderna (usar Google Fonts como Montserrat o Poppins)
+- Estructura con diseño responsivo (adaptado a móvil/tablet/escritorio)
+- Estilo con TailwindCSS o CSS moderno (flex, grid, tarjetas)
+- Agrega íconos con Lucide o FontAwesome
+- Cada sección separada por componentes si se usa React
+
+**Secciones que debe tener la web:**
+
+1. **Encabezado (Header):**
+   - Logo a la izquierda (placeholder)
+   - Menú: Inicio, Nosotros, Servicios (con submenú), Clientes, Blog, Contacto
+   - Botón destacado: "Solicita Cotización"
+
+2. **Página de Inicio:**
+   - Hero principal con fondo industrial o bombero/extintor (placeholder)
+   - Título: "Protegemos lo que más importa: tu vida, tu empresa y tu inversión"
+   - Botón: "Conoce nuestros servicios"
+   - Sección con tarjetas para:
+     - Extintores
+     - Impresión y Señalamientos
+     - Sistemas de detección y combate (DISIC Tech & Fire)
+   - Sección "¿Por qué elegirnos?" con 4 íconos y texto breve (Experiencia, Certificación, Clientes, Cobertura)
+   - Testimonios de clientes (opcional)
+   - Contacto rápido al final
+
+3. **Nosotros:**
+   - Historia
+   - Misión, Visión, Valores
+   - Certificaciones
+
+4. **Servicios (cada uno con su página si se usa router):**
+   - Extintores:
+     - Venta, Renta, Mantenimiento
+     - Tipos que manejan
+     - Normativas
+   - Señalamientos / Impresión:
+     - Señales de emergencia, rutas, personalizadas
+     - Impresión digital en vinil, lonas
+   - DISIC Tech & Fire:
+     - Instalación de alarmas, paneles, redes contra incendio
+     - Mantenimiento
+     - Proyectos destacados
+
+5. **Clientes:**
+   - Logos o nombres (falsos por ahora)
+   - Casos de éxito
+
+6. **Blog / Novedades:**
+   - Noticias, artículos sobre seguridad y normativas
+
+7. **Contacto:**
+   - Formulario de contacto
+   - Ubicación en mapa (Google Maps embed)
+   - WhatsApp y teléfono directo
+
+**Extras opcionales:**
+- Agrega íconos de redes sociales en el footer
+- Agrega animaciones suaves al hacer scroll (Framer Motion o simplemente CSS)
+- Usa imágenes de ejemplo de extintores y sistemas de detección como placeholders
+
+Por favor, genera el código en **React + TailwindCSS**, o HTML/CSS plano si no se puede usar frameworks. Usa componentes reutilizables para cada sección si es posible.
