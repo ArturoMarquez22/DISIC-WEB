@@ -41,15 +41,14 @@
       }
 
       .logo {
-        font-size: 1.25rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        color: var(--text);
-        text-transform: uppercase;
+        display: flex;
+        align-items: center;
       }
 
-      .logo span {
-        color: var(--accent);
+      .logo-image {
+        width: 148px;
+        height: auto;
+        display: block;
       }
 
       .nav-links {
@@ -156,12 +155,13 @@
   <body>
     <header>
       <nav>
-        <div class="logo">DISIC <span>WEB</span></div>
+        <div class="logo">
+          <img class="logo-image" src="images/disiclogo.png" alt="DISIC WEB" />
+        </div>
         <ul class="nav-links">
           <li><a href="#extintores">Extintores</a></li>
-          <li><a href="#sistemas">Sistemas contra incendios</a></li>
           <li><a href="#impresion">Impresión digital</a></li>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sistemas">Sistemas contra incendios</a></li>
           <li><a href="#clientes">Clientes</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -187,16 +187,16 @@
             atención inmediata.
           </p>
         </article>
-        <article class="card" id="sistemas">
-          <h2>Sistemas contra incendios</h2>
-          <p>
-            Diseño, instalación y soporte técnico para infraestructuras críticas.
-          </p>
-        </article>
         <article class="card" id="impresion">
           <h2>Impresión digital</h2>
           <p>
             Soluciones de impresión de alta calidad para marcas exigentes.
+          </p>
+        </article>
+        <article class="card" id="sistemas">
+          <h2>Sistemas contra incendios</h2>
+          <p>
+            Diseño, instalación y soporte técnico para infraestructuras críticas.
           </p>
         </article>
         <article class="card" id="clientes">
