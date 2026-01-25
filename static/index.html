@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISIC - Inicio</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0b0b;
+        --surface: #111111;
+        --accent: #e11d2e;
+        --text: #f5f5f5;
+        --muted: #b0b0b0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 32px 8vw 0;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        border-bottom: 1px solid #1f1f1f;
+        padding-bottom: 20px;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: var(--text);
+        text-transform: uppercase;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus {
+        color: var(--accent);
+      }
+
+      main {
+        padding: 72px 8vw 96px;
+        display: grid;
+        gap: 48px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 16px;
+        max-width: 680px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 3.5vw, 3.2rem);
+        font-weight: 600;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .hero .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 24px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        width: fit-content;
+      }
+
+      .sections {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid #1f1f1f;
+        padding: 24px;
+        border-radius: 16px;
+        min-height: 160px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+        color: var(--accent);
+      }
+
+      .card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        padding: 24px 8vw 40px;
+        border-top: 1px solid #1f1f1f;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 640px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav-links {
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">DISIC <span>WEB</span></div>
+        <ul class="nav-links">
+          <li><a href="#extintores">Extintores</a></li>
+          <li><a href="#sistemas">Sistemas contra incendios</a></li>
+          <li><a href="#impresion">Impresión digital</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <h1>Soluciones integrales en seguridad, impresión y señalización.</h1>
+        <p>
+          Una experiencia minimalista, directa y moderna para presentar nuestras
+          líneas principales: extintores, sistemas contra incendios e impresión
+          digital.
+        </p>
+        <a class="cta" href="#contacto">Habla con nosotros</a>
+      </section>
+
+      <section class="sections">
+        <article class="card" id="extintores">
+          <h2>Extintores</h2>
+          <p>
+            Mantenimiento, recarga y suministro de equipos certificados con
+            atención inmediata.
+          </p>
+        </article>
+        <article class="card" id="sistemas">
+          <h2>Sistemas contra incendios</h2>
+          <p>
+            Diseño, instalación y soporte técnico para infraestructuras críticas.
+          </p>
+        </article>
+        <article class="card" id="impresion">
+          <h2>Impresión digital</h2>
+          <p>
+            Soluciones de impresión de alta calidad para marcas exigentes.
+          </p>
+        </article>
+        <article class="card" id="clientes">
+          <h2>Clientes</h2>
+          <p>
+            Trabajamos con empresas que priorizan la seguridad y la comunicación
+            clara.
+          </p>
+        </article>
+        <article class="card" id="contacto">
+          <h2>Contacto</h2>
+          <p>
+            Coordinemos una visita técnica o una propuesta personalizada para tu
+            proyecto.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      DISIC &copy; 2024 · Seguridad y comunicación visual en un mismo lugar.
+    </footer>
+  </body>
+</html>
